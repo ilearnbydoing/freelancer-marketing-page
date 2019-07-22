@@ -354,13 +354,13 @@
     value="Send Enquiry" />
     <div submit-success>
     <template type="amp-mustache">
-      Success! Thanks {{response}} for trying the <code>amp-form</code> demo! Try to insert the word "error" as a name input in the form to see how <code>amp-form</code> handles errors.
+      {{response}}
     </template>
   </div>
   <div submit-error>
     <template type="amp-mustache">
-      Error! Thanks {{response}} for trying the <code>amp-form</code> demo with an error response.
-    </template>
+{{response}  
+  </template>
   </div>
     </form>
     </div>

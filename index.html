@@ -329,7 +329,7 @@
       <div class="travel-hero-search">
         <form class="enquiry-form"
   method="post"
-  action-xhr="https://forms.php.webanaya.com/durgeshgupta.com/get-a-quote.php" target="_top" id="enquiryForm">
+  action-xhr="https://forms.php.webanaya.com/durgeshgupta.com-get-a-quote.php" target="_top" id="enquiryForm">
         <label class="travel-shadow flex col-12 mb1 relative rounded">
             <i class="fa fa-id-card-o icon" aria-hidden="true"></i>
           <input class="input-icon travel-input travel-input-big border block col-12" type="text" name="name" placeholder="Your full name please?" required id="show-all-on-submit-email" />
@@ -352,12 +352,12 @@
     value="Send Enquiry" />
     <div submit-success>
     <template type="amp-mustache">
-      Success! Thanks {{name}} for trying the <code>amp-form</code> demo! Try to insert the word "error" as a name input in the form to see how <code>amp-form</code> handles errors.
+      Success! Thanks {{response}} for trying the <code>amp-form</code> demo! Try to insert the word "error" as a name input in the form to see how <code>amp-form</code> handles errors.
     </template>
   </div>
   <div submit-error>
     <template type="amp-mustache">
-      Error! Thanks {{name}} for trying the <code>amp-form</code> demo with an error response.
+      Error! Thanks {{response}} for trying the <code>amp-form</code> demo with an error response.
     </template>
   </div>
     </form>

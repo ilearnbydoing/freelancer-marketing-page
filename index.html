@@ -16,7 +16,8 @@
 
 
 <script custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async=""></script>
-<!-- <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async=""></script> -->
+<script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async=""></script>
+<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 
 <script custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js" async=""></script>
 
@@ -247,6 +248,14 @@
 .input-icon:focus {
   border: 2px solid dodgerblue;
 }
+
+form.amp-form-submit-success [submit-success] {
+            color: #ffffff;
+        }
+
+form.amp-form-submit-error [submit-error] {
+            color: #dc4e41;
+        }
 </style>
 </head>
   <body>
@@ -350,8 +359,9 @@
           <textarea rows="4" cols="50" class="input-icon travel-input travel-input-big border block col-12" placeholder="Please enter your message here if any" required name="message" id="show-all-on-submit-email"></textarea>
         </label>
 
-        <input class="ampstart-btn travel-input-big rounded center bold white block col-12" type="submit"
-    value="Send Enquiry" />
+          <input class="ampstart-btn travel-input-big rounded center bold white block col-12" type="submit"
+      value="Send Enquiry" />
+
     <div submit-success>
     <template type="amp-mustache">
       {{response}}

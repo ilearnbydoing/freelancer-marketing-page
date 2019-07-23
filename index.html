@@ -23,6 +23,14 @@
 
 <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
 
+
+ <!-- ## Scroll to Top Setup -->
+  <!--  Import amp-position-observer extension -->
+  <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+
+  <!--  Import amp-animation extension -->
+  <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 
@@ -256,10 +264,142 @@ form.amp-form-submit-success [submit-success] {
 form.amp-form-submit-error [submit-error] {
             color: #dc4e41;
         }
+
+/* Scroll To Top CSS */
+:root {
+    --color-primary: #005AF0;
+    --color-secondary: #00DCC0;
+    --color-text-light: #fff;
+
+    --space-2: 1rem;   /* 16px */
+
+    --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  }
+.scrollToTop {
+      color: var(--color-text-light);
+      font-size: 1.4em;
+      box-shadow: var(--box-shadow-1);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      background: var(--color-primary);
+      z-index: 9999;
+      bottom: var(--space-2);
+      right: var(--space-2);
+      position: fixed;
+      opacity: 0;
+      visibility: hidden;
+    }
+    .spacer {
+      width: 100vw;
+      max-width: 700px;
+      height: 200vh;
+      background-color: var(--color-secondary);
+    }
+    /* we move the anchor down to componsate the fixed header */
+    .target {
+      position: relative;
+    }
+    .target-anchor {
+      position: absolute;
+      top: -72px;
+      left: 0;
+    }
+/* Portfolio CSS */
+.portfolio {
+	width: 100%;
+	float: left;
+	padding: 60px 0 30px
+}
+.portfolio_slider_main {
+	width: 100%;
+	float: left;
+	position: relative
+}
+.portfolio_slider {
+	width: 100%;
+	float: left
+}
+.portfolio_slider_main .img {
+	width: 600px;
+	float: left
+}
+.portfolio_slider_main .img img {
+	width: 100%
+}
+.portfolio_con {
+	width: 613px;
+	float: right;
+	padding-top: 10px
+}
+.portfolio_con .txt1 {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 20px;
+	background: url(img/portfolio/line3.jpg) left bottom no-repeat;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	color: #ed6d79
+}
+.portfolio_con .txt1 span {
+	font-weight: 600
+}
+.portfolio_con .txt1 a {
+	font-size: 12px;
+	text-decoration: none;
+	font-weight: 600;
+	color: #ED6D79
+}
+.portfolio_con .txt1 a:hover {
+	text-decoration: underline
+}
+.portfolio_con .txt2 {
+	font-size: 20px;
+	line-height: 30px;
+	color: #2d3e50;
+	font-weight: 300
+}
+.portfolio_con .txt3 {
+	font-size: 16px;
+	line-height: 26px;
+	color: #aeaeae;
+	font-weight: 300;
+	padding: 20px 0;
+	margin: 15px 0;
+	border-top: 1px solid #e5e6e8;
+	border-bottom: 1px solid #e5e6e8;
+	width: 100%;
+	float: left
+}
+
+/* AMP carousal buttons */
+/*
+.amp-carousel-button {
+	float: right;
+	margin-top: -80px;
+	position: relative;
+	z-index: 100
+}
+.amp-carousel-button-prev {
+	float: left;
+	text-indent: -100000px;
+	background: url(img/portfolio/prev.png);
+	width: 25px;
+	height: 24px
+}
+.amp-carousel-button-next {
+	float: left;
+	text-indent: -100000px;
+	background: url(img/portfolio/next.png);
+	width: 25px;
+	height: 24px
+} */
 </style>
 </head>
   <body>
-    <section class="travel-main-wrapper overflow-hidden" role="main">
+    <section class="travel-main-wrapper overflow-hidden" role="main" id="top">
 <section class="relative z2">
 <div class="clearfix">
 <div class="sm-col sm-col-12 md-col-9">
@@ -277,7 +417,7 @@ form.amp-form-submit-error [submit-error] {
               <div class="t4">Reinventing the web</div>
               <div class="t1">one step at a time</div>
               <div class="t2">Be it website design or marketing automation, I use technology to empower you!</div>
-              <div class="t3"><a class="typeform-share" href="https://durgeshgupta.typeform.com/to/hbUAwj" data-mode="1" target="_blank">Get Started</a></div>
+              <div class="t3"><a class="typeform-share" href="#name" data-mode="1" target="_blank">Get Started</a></div>
             </div>
                   </div>
         </div>
@@ -291,7 +431,7 @@ form.amp-form-submit-error [submit-error] {
               <div class="t4">Fine design, doesn't just happen; </div>
               <div class="t1">I make it happen!</div>
               <div class="t2">From logos to websites, I deliver designs that are engaging & enhance user delight.</div>
-              <div class="t3"><a class="typeform-share" href="https://durgeshgupta.typeform.com/to/hbUAwj" data-mode="1" target="_blank">Design with me</a></div>
+              <div class="t3"><a class="typeform-share" href="#name" data-mode="1" target="_blank">Design with me</a></div>
             </div>
                   </div>
         </div>
@@ -303,7 +443,7 @@ form.amp-form-submit-error [submit-error] {
               <div class="t4">Well-engineered websites</div>
               <div class="t1">for top notch user experience</div>
               <div class="t2">E-commerce to blogs, I develop websites, which are the perfect blend of presentation and performance.</div>
-              <div class="t3"><a class="typeform-share" href="https://durgeshgupta.typeform.com/to/hbUAwj" data-mode="1" target="_blank">Get In touch</a></div>
+              <div class="t3"><a class="typeform-share" href="#name" data-mode="1" target="_blank">Get In touch</a></div>
             </div>
                   </div>
         </div>
@@ -318,7 +458,7 @@ form.amp-form-submit-error [submit-error] {
               <div class="t4">Top Notch Quality at</div>
               <div class="t1">Competitive prices</div>
               <div class="t2">Still haven't launched your website online? It' time now! I provide custom websites at competitive prices.</div>
-              <div class="t3"><a class="typeform-share" href="https://durgeshgupta.typeform.com/to/hbUAwj" data-mode="1" target="_blank">Let's do this!</a></div>
+              <div class="t3"><a class="typeform-share" href="#name" data-mode="1" target="_blank">Let's do this!</a></div>
             </div>
                   </div>
         </div>
@@ -332,6 +472,10 @@ form.amp-form-submit-error [submit-error] {
       <header>
         <h1 class="mt2 mb1 line-height-1 white">Start<br class="md-hide lg-hide"> a <span class="bold">project</span> with us</h1>
         <h2 class="line-height-1 white bold xs-hide sm-hide">Feel free to contact us</h2>
+        <amp-position-observer
+        on="enter:hideAnim.start; exit:showAnim.start"
+        layout="nodisplay">
+      </amp-position-observer>
       </header>
       <!--  Enquiry Form -->
   
@@ -344,7 +488,7 @@ form.amp-form-submit-error [submit-error] {
   action="https://forms.php.webanaya.com/durgeshgupta.com-get-a-quote.php" target="_top" id="enquiryForm"> -->
         <label class="travel-shadow flex col-12 mb1 relative rounded">
             <i class="fa fa-id-card-o icon" aria-hidden="true"></i>
-          <input class="input-icon travel-input travel-input-big border block col-12" type="text" name="name" placeholder="Your full name please?" required id="show-all-on-submit-email" />
+          <input class="input-icon travel-input travel-input-big border block col-12" type="text" name="name" id="name" placeholder="Your full name please?" required id="show-all-on-submit-email" />
         </label>
         <label class="travel-shadow flex col-12 mb1 relative rounded">
             <i class="fa fa-envelope-o icon" aria-hidden="true"></i>
@@ -418,7 +562,7 @@ viewBox="0 0 64 64">    <path style="fill:currentColor;line-height:normal;text-i
               PHP
             </p>
           </a>
-          <a href="travel-results.amp" class="travel-activities-activity travel-type-artistic mx1">
+          <a href="#" class="travel-activities-activity travel-type-artistic mx1">
             <div class="travel-shadow circle inline-block">
               <div class="travel-activities-activity-icon">
 
@@ -430,7 +574,7 @@ viewBox="0 0 64 64">    <path style="fill:currentColor;normal;text-indent:0;text
               HTML5
             </p>
           </a>
-          <a href="travel-results.amp" class="travel-activities-activity travel-type-drinks mx1">
+          <a href="#" class="travel-activities-activity travel-type-drinks mx1">
             <div class="travel-shadow circle inline-block">
               <div class="travel-activities-activity-icon">
 
@@ -442,7 +586,7 @@ viewBox="0 0 64 64">    <path style="fill:currentColor;normal;text-indent:0;text
               CSS3
             </p>
           </a>
-          <a href="travel-results.amp" class="travel-activities-activity travel-type-fashion mx1">
+          <a href="#" class="travel-activities-activity travel-type-fashion mx1">
             <div class="travel-shadow circle inline-block">
               <div class="travel-activities-activity-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -453,7 +597,7 @@ viewBox="0 0 64 64"><path style=" fill: currentColor; " d="M 31 4 C 19.902344 4 
               WordPress
             </p>
           </a>
-          <a href="travel-results.amp" class="travel-activities-activity travel-type-food mx1">
+          <a href="#" class="travel-activities-activity travel-type-food mx1">
             <div class="travel-shadow circle inline-block">
               <div class="travel-activities-activity-icon">
 
@@ -465,7 +609,7 @@ viewBox="0 0 80 80">    <path style="fill:currentColor;normal;text-indent:0;text
               Nodejs
             </p>
           </a>
-          <a href="travel-results.amp" class="travel-activities-activity travel-type-music mx1">
+          <a href="#" class="travel-activities-activity travel-type-music mx1">
             <div class="travel-shadow circle inline-block">
               <div class="travel-activities-activity-icon">
 
@@ -537,6 +681,166 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
 </div></section>
 <!--/ Activities -->
 
+<!-- Portfolio Starts-->
+<amp-carousel height="400"
+    layout="fixed-height"
+    type="slides" autoplay>
+    <div class="owl-item">
+<div class="item">
+    <div class="portfolio_slider_main">
+              <div class="main_container">
+        <div class="img"> <img src="img/portfolio/byro-creations.jpg"> </div>
+        <div class="portfolio_con">
+                  <div class="txt1">
+            <div>Byro<span>Creations</span></div>
+            <div><a href="http://work.durgeshgupta.com#byro" target="_blank">www.byrocreations.com</a></div>
+          </div>
+                  <div class="txt2">Byro creations is mult-functional concept born in 2006, out of a passion for creativity in design, music and art.</div>
+                  <div class="txt3">
+            <p><strong>Technology Used:</strong> xHTML, Bootstrap 4.0, CSS 3.0/2.0</p>
+          </div>
+                </div>
+      </div>
+            </div>
+  </div></div><div class="owl-item"><div class="item">
+    <div class="portfolio_slider_main">
+              <div class="main_container">
+        <div class="img"> <img src="img/portfolio/newrampgreen.jpg"></div>
+        <div class="portfolio_con">
+                  <div class="txt1">
+            <div>NEWRAMPGREEN <span>CORPORATE</span></div>
+            <div><a href="http://work.durgeshgupta.com#newrampgreen" target="_blank">www.newrampgreen.com</a></div>
+          </div>
+                  <div class="txt2">As an organization, New RAMPgreen Technologies provides technology driven, high-quality, multi-channel knowledge based services &amp; solutions that enables increased customer satisfaction, sales growth and enhanced customer loyalty.</div>
+                  <div class="txt3">
+            <p><strong>Technology Used:</strong> WordPress, PHP, CSS 3.0/2.0</p>
+          </div>
+                </div>
+      </div>
+            </div>
+  </div></div><div class="owl-item"><div class="item">
+    <div class="portfolio_slider_main">
+              <div class="main_container">
+        <div class="img"> <img src="img/portfolio/niibindia.jpg"> </div>
+        <div class="portfolio_con">
+                  <div class="txt1">
+            <div>NIIB <span>NGO</span></div>
+            <div><a href="http://work.durgeshgupta.com#niibindia" target="_blank">www.niibindia.org</a></div>
+          </div>
+                  <div class="txt2">NIIB Foundation embarked its first worldwide office in India in 2016. It started small with four Power programs in Mumbai, Maharashtra. </div>
+                  <div class="txt3">
+            <p><strong>Technology Used:</strong> WordPress, PHP, CSS 3.0/2.0</p>
+          </div>
+                </div>
+      </div>
+            </div>
+  </div></div><div class="owl-item"><div class="item">
+    <div class="portfolio_slider_main">
+              <div class="main_container">
+        <div class="img"> <img src="img/portfolio/sanskara.jpg"> </div>
+        <div class="portfolio_con">
+                  <div class="txt1">
+            <div>SANSKARA <span>TRUST</span></div>
+            <div><a href="http://work.durgeshgupta.com#sanskara" target="_blank">www.sanskara.org</a></div>
+          </div>
+                  <div class="txt2">Sanskara’s objective is to help protect critically endangered natural landscapes and eco sensitive zones by raising awareness and working together with local communities, organizations and governing authorities.</div>
+                  <div class="txt3">
+            <p><strong>Technology Used:</strong> WordPress, PHP, CSS 3.0/2.0</p>
+          </div>
+                </div>
+      </div>
+            </div>
+  </div></div><div class="owl-item"><div class="item">
+    <div class="portfolio_slider_main">
+              <div class="main_container">
+        <div class="img"> <img src="img/portfolio/blog-webanaya.jpg"> </div>
+        <div class="portfolio_con">
+                  <div class="txt1">
+            <div>Blog WebAnaya <span>NEWS/MAGAZINE</span></div>
+            <div><a href="http://work.durgeshgupta.com#blogwebanaya" target="_blank">blog.webanaya.com</a></div>
+          </div>
+                  <div class="txt2">Blog.webanaya.com is a blogging platform where Webanaya publishes some of the notable web industry news and updates. It’s leading source of information, news, resource and updates for Web People including novice users to Expert.</div>
+                  <div class="txt3">
+            <p><strong>Technology Used:</strong> Jekyll, Ruby, xHTML, CSS 3.0/2.0</p>
+          </div>
+                </div>
+      </div>
+            </div>
+  </div></div><div class="owl-item"><div class="item">
+    <div class="portfolio_slider_main">
+              <div class="main_container">
+        <div class="img"> <img src="img/portfolio/email-webanaya.jpg"> </div>
+        <div class="portfolio_con">
+                  <div class="txt1">
+            <div>Email WebAnaya <span>Email Marketing</span></div>
+            <div><a href="http://work.durgeshgupta.com#emailwebanaya" target="_blank">email.webanaya.com</a></div>
+          </div>
+                  <div class="txt2">
+                    Email.Webanaya.com offers All in one email marketing solutions. You can build new list and send newsletter anytime and can track open and click through rates.
+                  </div>
+                  <div class="txt3">
+            <p><strong>Technology Used:</strong> Jekyll, Ruby, xHTML, CSS 3.0/2.0</p>
+          </div>
+                </div>
+      </div>
+            </div>
+  </div></div><div class="owl-item"><div class="item">
+    <div class="portfolio_slider_main">
+              <div class="main_container">
+        <div class="img"> <img src="img/portfolio/smtp-webanaya.jpg"> </div>
+        <div class="portfolio_con">
+                  <div class="txt1">
+            <div>SMTP WebAnaya <span>Email Delivery</span></div>
+            <div><a href="http://work.durgeshgupta.com#smtpwebanaya" target="_blank">smtp.webanaya.com</a></div>
+          </div>
+                  <div class="txt2">
+                    SMTP.Webanaya.com offers email delivery services both transactional and promotional, it can be integrated to any smtp based application to send emails, it also offer API to send emails.
+                  </div>
+                  <div class="txt3">
+            <p><strong>Technology Used:</strong> Jekyll, Ruby, xHTML, CSS 3.0/2.0</p>
+          </div>
+                </div>
+      </div>
+            </div>
+  </div></div><div class="owl-item"><div class="item">
+    <div class="portfolio_slider_main">
+              <div class="main_container">
+        <div class="img"> <img src="img/portfolio/welgrowindia.jpg"> </div>
+        <div class="portfolio_con">
+                  <div class="txt1">
+            <div>WELGROWINDIA <span>CORPORATE</span></div>
+            <div><a href="http://work.durgeshgupta.com#welgrowindia" target="_blank">www.welgrowindia.com</a></div>
+          </div>
+                  <div class="txt2">Welgrow Line India Pvt Ltd, an ISO 9001 – 2008 certified company, commenced operations in 1997 as International Freight Forwarder today we have established ourselves as one of the leading NVOCC Company providing integrated logistics solutions.</div>
+                  <div class="txt3">
+            <p><strong>Technology Used:</strong> WordPress, PHP, CSS 3.0/2.0</p>
+          </div>
+                </div>
+      </div>
+            </div>
+  </div></div><div class="owl-item"><div class="item">
+    <div class="portfolio_slider_main">
+              <div class="main_container">
+        <div class="img"> <img src="img/portfolio/ti2.jpg"> </div>
+        <div class="portfolio_con">
+                  <div class="txt1">
+            <div>Ti2 <span>CORPORATE</span></div>
+            <div><a href="http://work.durgeshgupta.com#ti2" target="_blank">www.ti2.com.au</a></div>
+          </div>
+                  <div class="txt2">Ti2 Automation is our traditional business, taking the knowledge from years of work in flexible, J-I-T  production, with newer products from World Class suppliers like Softing in Germany, to provide robust,  competitive industrial automation solutions, helping companies like Cochlear &amp;  Nanosonics in emerging industries.</div>
+                  <div class="txt3">
+            <p><strong>Technology Used:</strong> WordPress, PHP, CSS 3.0/2.0</p>
+          </div>
+                </div>
+      </div>
+            </div>
+  </div></div>
+  </amp-carousel>
+<!-- Portfolio Ends -->
+
+
+
+
         <div class="travel-footer-wrapper">
 
 
@@ -562,5 +866,56 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
         </div>
       </div>
     </section>
+
+    <!-- Scroll To Top -->
+      <!--
+    We use 2 `amp-animation` elements to trigger the visibility of the button. The first one is for making the button visible...
+  -->
+  <amp-animation id="showAnim" layout="nodisplay">
+      <script type="application/json">
+        {
+          "duration": "200ms",
+           "fill": "both",
+           "iterations": "1",
+           "direction": "alternate",
+           "animations": [
+             {
+               "selector": "#scrollToTopButton",
+               "keyframes": [
+                 { "opacity": "1", "visibility": "visible" }
+               ]
+             }
+           ]
+        }
+      </script>
+    </amp-animation>
+    <!-- ... and the second one is for adding the button.-->
+    <amp-animation id="hideAnim" layout="nodisplay">
+      <script type="application/json">
+        {
+         "duration": "200ms",
+           "fill": "both",
+           "iterations": "1",
+           "direction": "alternate",
+           "animations": [
+             {
+               "selector": "#scrollToTopButton",
+               "keyframes": [
+                 { "opacity": "0", "visibility": "hidden" }
+               ]
+             }
+           ]
+       }
+      </script>
+    </amp-animation>
+    <!--
+      Here is a dummy spacer.
+    -->
+    <!-- <div class="spacer"></div> -->
+    <!--## The scroll to top button -->
+    <!--
+      We use the `scrollTo` action to scroll the page when the button is tapped. Find more about actions [here](https://github.com/ampproject/amphtml/blob/master/spec/amp-actions-and-events.md).
+    -->
+    <button id="scrollToTopButton" on="tap:top.scrollTo(duration=200)" class="scrollToTop">⌃</button>
   </body>
 </html>

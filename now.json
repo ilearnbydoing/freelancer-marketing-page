@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "builds": [
+    { "src": "**", "use": "@now/static" }
+  ],
   "alias": ["durgeshgupta.com"],
   "routes": [
     {
@@ -7,8 +10,5 @@
       "status": 301,
       "headers": { "Location": "https://www.durgeshgupta.com/$1" }
     }
-  ],
-  "builds": [
-    { "src": "**", "use": "@now/static" }
   ]
 }

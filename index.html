@@ -6,6 +6,7 @@
   <title>Freelance Web Design, Developer and Marketer</title>
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <meta name="amp-google-client-id-api" content="googleanalytics">
+  <link rel="canonical" href="/index.html">
 
   <script async="" src="https://cdn.ampproject.org/v0.js"></script>
 
@@ -84,7 +85,7 @@
   <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async=""></script>
   <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 
-  <script custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js" async=""></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
 
   <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
 
@@ -3748,34 +3749,6 @@
       top: -72px;
       left: 0;
     }
-
-    /* Portfolio CSS */
-    .portfolio {
-      width: 100%;
-      padding: 60px 0 30px
-    }
-
-    .portfolio_slider_main {
-      width: 100%;
-      position: relative
-    }
-
-    .portfolio_slider {
-      width: 100%;
-    }
-
-    .portfolio_slider_main .img {
-      width: 600px;
-    }
-
-    .portfolio_slider_main .img img {
-      width: 100%
-    }
-
-    .portfolio_con {
-
-    }
-
     .portfolio_con .txt1 {
       font-size: 24px;
       font-weight: 300;
@@ -3821,28 +3794,6 @@
       float: left
     }
 
-    /* AMP carousal buttons */
-    /*
-.amp-carousel-button {
-	float: right;
-	margin-top: -80px;
-	position: relative;
-	z-index: 100
-}
-.amp-carousel-button-prev {
-	float: left;
-	text-indent: -100000px;
-	background: url(img/portfolio/prev.png);
-	width: 25px;
-	height: 24px
-}
-.amp-carousel-button-next {
-	float: left;
-	text-indent: -100000px;
-	background: url(img/portfolio/next.png);
-	width: 25px;
-	height: 24px
-} */
   </style>
 </head>
 
@@ -3950,7 +3901,7 @@
                   <label class="travel-shadow flex col-12 mb1 relative rounded">
                     <i class="fa fa-id-card-o icon" aria-hidden="true"></i>
                     <input class="input-icon travel-input travel-input-big border block col-12" type="text" name="name"
-                      id="name" placeholder="Your full name please?" required id="show-all-on-submit-email" />
+                      id="name" placeholder="Your full name please?" required />
                   </label>
                   <label class="travel-shadow flex col-12 mb1 relative rounded">
                     <i class="fa fa-envelope-o icon" aria-hidden="true"></i>
@@ -4145,6 +4096,7 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
     </div>
   </div>
 </div></section>
+      </div>
 <!--/ Activities -->
 
 <!-- Portfolio Starts-->
@@ -4160,7 +4112,7 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
 <div class="item">
     <div class="portfolio_slider_main max-width-4 mx-auto">
               <div class="main_container clearfix">
-        <div class="col xs-col-12 sm-col-12 md-col-6"> <amp-img src="img/portfolio/byro-creations.jpg" layout="responsive" width="857" height="528"></amp-img> </div>
+        <div class="col xs-col-12 sm-col-12 md-col-6"> <amp-img src="img/portfolio/byro-creations.jpg" width="857" height="528" layout="responsive" alt="ByroCreations"></amp-img> </div>
         <div class="portfolio_con col xs-col-12 sm-col-12 md-col-6 ">
                   <div class="txt1">
             <div>Byro<span>Creations</span></div>
@@ -4192,7 +4144,7 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
   </div></div><div class="owl-item"><div class="item">
     <div class="portfolio_slider_main">
               <div class="main_container">
-        <div class="col xs-col-12 sm-col-12 md-col-6"> <amp-img src="img/portfolio/niibindia.jpg" layout="responsive" width="857" height="528"></amp-img>> </div>
+        <div class="col xs-col-12 sm-col-12 md-col-6"> <amp-img src="img/portfolio/niibindia.jpg" layout="responsive" width="857" height="528"></amp-img></div>
         <div class="portfolio_con col xs-col-12 sm-col-12 md-col-6">
                   <div class="txt1">
             <div>NIIB <span>NGO</span></div>
@@ -4208,7 +4160,7 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
   </div></div><div class="owl-item"><div class="item">
     <div class="portfolio_slider_main">
               <div class="main_container">
-        <div class="col xs-col-12 sm-col-12 md-col-6"> <amp-img src="img/portfolio/sanskara.jpg" layout="responsive" width="857" height="528"></amp-img>> </div>
+        <div class="col xs-col-12 sm-col-12 md-col-6"> <amp-img src="img/portfolio/sanskara.jpg" layout="responsive" width="857" height="528"></amp-img></div>
         <div class="portfolio_con col xs-col-12 sm-col-12 md-col-6">
                   <div class="txt1">
             <div>SANSKARA <span>TRUST</span></div>
@@ -4224,7 +4176,7 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
   </div></div><div class="owl-item"><div class="item">
     <div class="portfolio_slider_main">
               <div class="main_container">
-        <div class="col xs-col-12 sm-col-12 md-col-6"> <amp-img src="img/portfolio/blog-webanaya.jpg" layout="responsive" width="857" height="528"></amp-img>> </div>
+        <div class="col xs-col-12 sm-col-12 md-col-6"> <amp-img src="img/portfolio/blog-webanaya.jpg" layout="responsive" width="857" height="528"></amp-img></div>
         <div class="portfolio_con col xs-col-12 sm-col-12 md-col-6">
                   <div class="txt1">
             <div>Blog WebAnaya <span>NEWS/MAGAZINE</span></div>
@@ -4240,7 +4192,7 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
   </div></div><div class="owl-item"><div class="item">
     <div class="portfolio_slider_main">
               <div class="main_container">
-        <div class="col xs-col-12 sm-col-12 md-col-6"> <amp-img src="img/portfolio/email-webanaya.jpg" layout="responsive" width="857" height="528"></amp-img>></div>
+        <div class="col xs-col-12 sm-col-12 md-col-6"> <amp-img src="img/portfolio/email-webanaya.jpg" layout="responsive" width="857" height="528"></amp-img></div>
         <div class="portfolio_con col xs-col-12 sm-col-12 md-col-6">
                   <div class="txt1">
             <div>Email WebAnaya <span>Email Marketing</span></div>
@@ -4276,7 +4228,7 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
   </div></div><div class="owl-item"><div class="item">
     <div class="portfolio_slider_main">
               <div class="main_container">
-        <div class="col xs-col-12 sm-col-12 md-col-6"> <amp-img src="img/portfolio/welgrowindia.jpg" layout="responsive" width="857" height="528"></amp-img>></amp-img> </div>
+        <div class="col xs-col-12 sm-col-12 md-col-6"> <amp-img src="img/portfolio/welgrowindia.jpg" layout="responsive" width="857" height="528"></amp-img> </div>
         <div class="portfolio_con col xs-col-12 sm-col-12 md-col-6">
                   <div class="txt1">
             <div>WELGROWINDIA <span>CORPORATE</span></div>
@@ -4336,8 +4288,7 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
 </footer>
 <!--/ Footer  -->
         </div>
-      </div>
-    </section>
+
 
     <!-- Scroll To Top -->
       <!--
@@ -4380,14 +4331,11 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
        }
       </script>
     </amp-animation>
-    <!--
-      Here is a dummy spacer.
-    -->
-    <!-- <div class="spacer"></div> -->
     <!--## The scroll to top button -->
     <!--
       We use the `scrollTo` action to scroll the page when the button is tapped. Find more about actions [here](https://github.com/ampproject/amphtml/blob/master/spec/amp-actions-and-events.md).
     -->
     <button id="scrollToTopButton" on="tap:top.scrollTo(duration=200)" class="scrollToTop">⌃</button>
+  </section>
   </body>
 </html>

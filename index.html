@@ -3664,7 +3664,8 @@
 
     .slide .txt1 .t3 a:hover {
       background: #fff;
-      color: #ea5154
+      color: #ea5154;
+      cursor: pointer;
     }
 
     .slide .txt1 .t4 {
@@ -3681,6 +3682,17 @@
       color: white;
       min-width: 50px;
       text-align: center;
+    }
+
+    .icon-circle {
+      width: 50px;
+      height: 50px;
+      background: blueviolet;
+      border-radius: 50%;
+      text-align:center;
+      color: #ffffff;
+      font-size: 35px;
+      padding: 8px;
     }
 
     /* Style the input fields */
@@ -3922,7 +3934,17 @@
       width: 100%;
       float: left
     }
+/* Custom Typography */
 
+h2.title {
+    color: #2d3e50;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    background: url(img/line2.jpg) center bottom no-repeat;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
   </style>
 </head>
 
@@ -3947,7 +3969,7 @@
                       <div class="t1">one step at a time</div>
                       <div class="t2">Be it website design or marketing automation, I use technology to empower you!
                       </div>
-                      <div class="t3"><a class="typeform-share" href="#name" data-mode="1" target="_blank">Get
+                      <div class="t3"><a role="button" on="tap:name.scrollTo(duration=500, position=top)">Get
                           Started</a></div>
                     </div>
                   </div>
@@ -3963,7 +3985,7 @@
                       <div class="t1">I make it happen!</div>
                       <div class="t2">From logos to websites, I deliver designs that are engaging & enhance user
                         delight.</div>
-                      <div class="t3"><a class="typeform-share" href="#name" data-mode="1" target="_blank">Design with
+                      <div class="t3"><a role="button" on="tap:name.scrollTo(duration=500, position=top)">Design with
                           me</a></div>
                     </div>
                   </div>
@@ -3981,7 +4003,7 @@
                       <div class="t1">for top notch user experience</div>
                       <div class="t2">E-commerce to blogs, I develop websites, which are the perfect blend of
                         presentation and performance.</div>
-                      <div class="t3"><a class="typeform-share" href="#name" data-mode="1" target="_blank">Get In
+                      <div class="t3"><a role="button" on="tap:name.scrollTo(duration=500, position=top)">Get In
                           touch</a></div>
                     </div>
                   </div>
@@ -3998,7 +4020,7 @@
                       <div class="t1">Competitive prices</div>
                       <div class="t2">Still haven't launched your website online? It' time now! I provide custom
                         websites at competitive prices.</div>
-                      <div class="t3"><a class="typeform-share" href="#name" data-mode="1" target="_blank">Let's do
+                      <div class="t3"><a role="button" on="tap:name.scrollTo(duration=500, position=top)">Let's do
                           this!</a></div>
                     </div>
                   </div>
@@ -4007,6 +4029,9 @@
             </amp-carousel>
 
           </div>
+          <div class="relative">
+              <div class="scroll"> <span role="button" on="tap:about.scrollTo(duration=500, position=top)"><amp-img src="img/scroll.png" layout="fixed" width="39" height="72"></amp-img></span> </div>
+            </div>
         </div>
         <div class="sm-col sm-col-12 md-col-3">
           <div class="max-width-3 pb2 mx-auto flex self-end items-center bg-grey">
@@ -4063,13 +4088,21 @@
   </template>
   </div>
     </form>
-    </div>
 
-  </div>
+    <div class="p2 center">
+      <h2 class="white">For any query please speak to us at </h2>
+        <div><a href="tel:+919910099645" class="h2 text-decoration-none white p1">+91-99 100 99645</a></div>
+    <div class="flex">
+        <div class="p1"><a href="https://api.whatsapp.com/send?phone=919910099645&text=I%20am%20interested%20in%20Web%20Services"><i class="fa fa-whatsapp icon-circle"></i></a></div>
+      <div class="p1"><a href="#"><i class="fa fa-facebook icon-circle"></i></a></div>
+      <!-- <div class="p1"><a href="#"><i class="fa fa-twitter icon-circle"></i></a></div> -->
+      <!-- <div><a href="#"><i class="fa fa-instagram icon-circle"></i></a></div> -->
+      <div class="p1"><a href="#"><i class="fa fa-github icon-circle"></i></a></div>
+      <!-- <div><a href="#"><i class="fa fa-linkedin icon-circle"></i></a></div> -->
+    </div>
 </div> </div>
 </div>
 </section>
-  
 
       <div id="travel-landing-content" class="travel-landing-content relative">
 
@@ -4092,7 +4125,7 @@
 <section class="section-animation pb4 pt3 relative">
   <div class="max-width-3 mx-auto px1 md-px2">
     <!-- <h3 class="bold h1 line-height-2 mb2 md-hide lg-hide" aria-hidden="true">Our<br> Skills</h3> -->
-    <h3 class="bold h1 line-height-2 mb2 xs-hide sm-hide center">Featured Expertise</h3>
+    <h2 class="bold title h2 mb2 xs-hide sm-hide center">Featured Expertise</h2>
     <h4 class="center">We work with modern web languages and cutting edge development tools.</h4>
   </div>
   <div class="overflow-scroll">
@@ -4229,12 +4262,23 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
       </div>
 <!--/ Activities -->
 
+<!-- About Section Starts -->
+<!-- About Section Ends -->
+<section class="section-animation relative z3" id="about">
+
+    <div class="max-width-3 mx-auto px1 md-px2 mb2">
+        <!-- <h3 class="bold h1 line-height-2 mb2 md-hide lg-hide" aria-hidden="true">Our<br> Skills</h3> -->
+        <h2 class="bold title h2 mb2 center">About</h2>
+        <h4 class="center">I am a web professional (a freelance web designer and a full stack marketer based on Mumbai) I render my services both locally and globally. Being in Mumbai Suburban I serve clients nearby Mumbai and it's Suburban including Thane, Kalyan, Ulhasnagar, Ambarnath. I am specialized in creating dynamic and beautiful web pages. I have been in the field for nearly a decade, and have been loving every minute of it. I am an online marketer, entrepreneur, designer, open source developer, and overall thinker, offering over 10 years of experience on open source technologies i.e. PHP, WordPress, CSS 2/3, xHTML/html5, SEO/SEM/SMO/SMM. I have excelled my skills in WordPress, Joomla, PHP, MySQL, Javascript, HTML, Jquery, Woocommerce, and CSS to name a few. Individually I take web project and discuss in detail and determine how my skills will positively contribute to project.</h4>
+      </div>
+</section>
+
 <!-- Services Starts-->
 <section class="section-animation relative z3">
 
     <div class="max-width-3 mx-auto px1 md-px2 mb2">
         <!-- <h3 class="bold h1 line-height-2 mb2 md-hide lg-hide" aria-hidden="true">Our<br> Skills</h3> -->
-        <h3 class="bold h1 line-height-2 mb2 center">Our Services</h3>
+        <h2 class="bold title h2 mb2 center">Featured Services</h2>
         <h4 class="center">From Websites to #HashTags and everything in between! Be it an Ecommerce website or Marketing automation, technology is the driving force and I use technology to bring shape to your ideas</h4>
       </div>
 
@@ -4342,7 +4386,7 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
 <section class="section-animation pb4 pt3 relative">
     <div class="max-width-3 mx-auto px1 md-px2 mb2">
         <!-- <h3 class="bold h1 line-height-2 mb2 md-hide lg-hide" aria-hidden="true">Our<br> Skills</h3> -->
-        <h3 class="bold h1 line-height-2 mb2 center">Featured Projects</h3>
+        <h2 class="bold title h2 mb2 center">Featured Projects</h2>
         <h4 class="center">Here’s what I’ve been up to! This is just a glimpse of my work; want to know more about my projects? Reach out & I’ll share a detailed portfolio.</h4>
       </div>
 <amp-carousel height="600"

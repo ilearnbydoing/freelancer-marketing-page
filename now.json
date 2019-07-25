@@ -3,6 +3,7 @@
   "builds": [
     { "src": "**", "use": "@now/static" }
   ],
+  "alias": ["durgeshgupta.com"],
   "routes": [
     {
       "src": "/(.*)",

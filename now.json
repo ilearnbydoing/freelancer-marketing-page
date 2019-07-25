@@ -2,5 +2,12 @@
   "version": 2,
   "builds": [
     { "src": "**", "use": "@now/static" }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": { "Location": "https://www.durgeshgupta.com/$1" }
+    }
   ]
 }

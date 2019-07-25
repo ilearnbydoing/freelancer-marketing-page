@@ -3,12 +3,12 @@
   "builds": [
     { "src": "**", "use": "@now/static" }
   ],
-  "alias": ["durgeshgupta.com"],
+  "alias": ["www.durgeshgupta.com"],
   "routes": [
     {
       "src": "/(.*)",
       "status": 301,
-      "headers": { "Location": "https://www.durgeshgupta.com/$1" }
+      "headers": { "Location": "https://durgeshgupta.com/$1" }
     }
   ]
 }

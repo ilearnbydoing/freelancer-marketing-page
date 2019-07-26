@@ -1,0 +1,18 @@
+{
+    "items": [
+        {
+        "name": "ByroCreations",
+        "website": "www.byrocreations.com",
+        "image": "byro-creations.jpg",
+        "description": "Byro creations is mult-functional concept born in 2006, out of a passion for creativity in design, music and art.",
+        "technology": "xHTML, Bootstrap 4.0, CSS 3.0/2.0"
+    },
+    {
+        "name": "NEWRAMPGREEN CORPORATE",
+        "website": "www.newrampgreen.com",
+        "image": "newrampgreen.jpg",
+        "description": "As an organization, New RAMPgreen Technologies provides technology driven, high-quality, multi-channel knowledge based services & solutions that enables increased customer satisfaction, sales growth and enhanced customer loyalty.",
+        "technology": "WordPress, PHP, CSS 3.0/2.0"
+    }
+]
+}

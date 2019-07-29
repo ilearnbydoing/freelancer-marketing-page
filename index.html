@@ -250,7 +250,7 @@
   action="https://forms.php.webanaya.com/durgeshgupta.com-get-a-quote.php" target="_top" id="enquiryForm"> -->
                   <label class="travel-shadow flex col-12 mb1 relative rounded">
                     <i class="fa fa-id-card-o icon" aria-hidden="true"></i>
-                    <input class="input-icon travel-input travel-input-big border block col-12" type="text" name="name786"
+                    <input class="input-icon travel-input travel-input-big border block col-12" type="text" name="name"
                       id="name" placeholder="Your full name please?" required />
                   </label>
                   <label class="travel-shadow flex col-12 mb1 relative rounded">
@@ -269,7 +269,7 @@
                       placeholder="Please enter your message here if any" required name="message"
                       id="show-all-on-submit-email"></textarea>
                   </label>
-
+                  <input name="captcha-response" type="hidden" /> 
                                                    <!-- Google Captcha -->
                                                    <amp-recaptcha-input layout="nodisplay" name="recaptcha_token"
                                                    data-sitekey="6Ldd7K8UAAAAAKWnBdPH2suAGlNPNr_Tvn7S1wnG" data-action="recaptcha_example">
@@ -278,8 +278,6 @@
 
                   <input class="ampstart-btn travel-input-big rounded center bold white block col-12" type="submit"
                     value="Send Enquiry" />
-
-                    <div class="loading-message"> Loading... </div> 
 
     
                   <div submit-success>

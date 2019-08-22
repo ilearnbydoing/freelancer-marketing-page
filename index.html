@@ -259,14 +259,11 @@
                 </amp-position-observer>
               </header>
               <!--  Enquiry Form -->
-
+<!-- 
               <div class="travel-hero-search">
                 <form class="enquiry-form" method="post"
                   action-xhr="https://forms.php.webanaya.com/durgeshgupta.com-get-a-quote.php" target="_top"
                   id="amp-recaptcha-input-form">
-                  <!-- <form class="enquiry-form"
-  method="post"
-  action="https://forms.php.webanaya.com/durgeshgupta.com-get-a-quote.php" target="_top" id="enquiryForm"> -->
                   <label class="travel-shadow flex col-12 mb1 relative rounded">
                     <i class="fa fa-id-card-o icon" aria-hidden="true"></i>
                     <input class="input-icon travel-input travel-input-big border block col-12" type="text" name="name"
@@ -291,11 +288,9 @@
 
                   <input class="ampstart-btn travel-input-big rounded center bold white block col-12" type="submit"
                     value="Send Enquiry" />
-                  <!-- Google Captcha -->
+
                   <amp-recaptcha-input layout="nodisplay" name="recaptcha_token" data-sitekey="6LcaRrQUAAAAAHbEYBiidYMbxP2qrhenVYNpaYzp" data-action="recaptcha_example">
                   </amp-recaptcha-input>
-
-                  <!-- Google Recaptcha -->
     
                   <div submit-success>
                     <template type="amp-mustache">
@@ -307,6 +302,37 @@
                       {{response}}  
   </template>
   </div>
+    </form> -->
+    <form id="amp-recaptcha-input-form" method="POST" action-xhr="/documentation/examples/components/amp-recaptcha-input/api/recaptcha" target="_top">
+      <fieldset>
+        <label>
+          <span>Search for</span>
+          <input type="search" name="term" required>
+        </label>
+        <input name="submit-button" type="submit" value="Search">
+        <amp-recaptcha-input layout="nodisplay" name="recaptcha_token" data-sitekey="6LfcQ7IUAAAAAIv1KcgqyExGK0v8dLJtvV_Q6xD-" data-action="recaptcha_example">
+        </amp-recaptcha-input>
+      </fieldset>
+  
+      <div class="loading-message">
+        Loading...
+      </div>
+  
+      <div submit-success>
+        <template type="amp-mustache">
+          <h1>You searched for: {{term}}</h1>
+          <div><b>Score:</b> {{score}}</div>
+          <div><b>Recaptcha token:</b> {{recaptcha_token}}</div>
+          <div><b>Action:</b> {{action}}</div>
+        </template>
+      </div>
+  
+      <div submit-error>
+        <template type="amp-mustache">
+          <h1>Error! Please check the JS Console in your dev tools.</h1>
+          <p>{{message}}</p>
+        </template>
+      </div>
     </form>
 
     <div class="p2 center">

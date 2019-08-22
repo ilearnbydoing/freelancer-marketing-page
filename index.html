@@ -264,6 +264,7 @@
                 <form class="enquiry-form" method="post"
                   action-xhr="https://forms.php.webanaya.com/durgeshgupta.com-get-a-quote.php" target="_top"
                   id="enquiryForm">
+                  <fieldset>
                   <!-- <form class="enquiry-form"
   method="post"
   action="https://forms.php.webanaya.com/durgeshgupta.com-get-a-quote.php" target="_top" id="enquiryForm"> -->
@@ -288,15 +289,15 @@
                       placeholder="Please enter your message here if any" required name="message"
                       id="show-all-on-submit-email"></textarea>
                   </label>
-                                                   <!-- Google Captcha -->
-                                                   <amp-recaptcha-input layout="nodisplay" name="recaptcha_token"
-                                                   data-sitekey="6Ldd7K8UAAAAAKWnBdPH2suAGlNPNr_Tvn7S1wnG" data-action="recaptcha_example">
-                                               </amp-recaptcha-input>
-                                <!-- Google Recaptcha -->
 
                   <input class="ampstart-btn travel-input-big rounded center bold white block col-12" type="submit"
                     value="Send Enquiry" />
-
+                                                                     <!-- Google Captcha -->
+                                                                     <amp-recaptcha-input layout="nodisplay" name="recaptcha_token"
+                                                                     data-sitekey="6Ldd7K8UAAAAAKWnBdPH2suAGlNPNr_Tvn7S1wnG" data-action="recaptcha_example">
+                                                                 </amp-recaptcha-input>
+                                                  <!-- Google Recaptcha -->
+                                                </fieldset>
     
                   <div submit-success>
                     <template type="amp-mustache">

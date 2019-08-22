@@ -83,6 +83,8 @@
   <script custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async=""></script>
   <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async=""></script>
   <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+  <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+
 
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
 
@@ -777,6 +779,7 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
     <span tabindex="1" role="button" on="tap:home.scrollTo(duration=500, position=top)" class="active">Home</a></span>
     <span tabindex="2" role="button" on="tap:about.scrollTo(duration=500, position=top)" class="">About</a></span>
     <span tabindex="3" role="button" on="tap:portfolio.scrollTo(duration=500, position=top)" class="">Portfolio</a></span>
+    <span tabindex="3" role="button" on="tap:home.scrollTo(duration=500, position=top)" class="">Contact</a></span>
   </div>
 </footer>
 <!--/ Footer  -->
@@ -830,5 +833,10 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
     -->
     <button id="scrollToTopButton" on="tap:top.scrollTo(duration=200)" class="scrollToTop">⌃</button>
   </section>
+  <!-- PWA Installation -->
+  <amp-install-serviceworker src="/sw.js"
+  data-iframe-src="https://durgeshgupta.com/sw.html"
+  layout="nodisplay">
+</amp-install-serviceworker>
   </body>
 </html>

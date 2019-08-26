@@ -98,6 +98,7 @@
   <script async custom-element="amp-recaptcha-input" src="https://cdn.ampproject.org/v0/amp-recaptcha-input-0.1.js"></script>
 
   <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+  <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
 
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
@@ -312,7 +313,7 @@
       <!-- <div class="p1"><a href="#"><i class="fa fa-twitter icon-circle"></i></a></div> -->
       <!-- <div><a href="#"><i class="fa fa-instagram icon-circle"></i></a></div> -->
       <div class="p1"><a href="#"><i class="fa fa-github icon-circle"></i></a></div>
-      <!-- <div><a href="#"><i class="fa fa-linkedin icon-circle"></i></a></div> -->
+      <div class="p1"><a href="https://twitter.com/ilearnbydoing"><i class="fa fa-twitter icon-circle"></i></a></div>
     </div>
 </div> </div>
 </div>
@@ -761,6 +762,91 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
   </amp-carousel>
   </section>  
 <!-- Portfolio Ends -->
+<!-- Contact and Twitter -->
+<section id="contact">
+    <div class="max-width-3 mx-auto px1 md-px2 mb2">
+        <h2 class="bold title h2 mb2 center">Contact</h2>
+      </div>
+  <div class="col md-col-6 p2">
+    <amp-twitter width="375"
+    height="100" data-limit="3"
+    layout="responsive" data-timeline-source-type="profile" data-timeline-url="ilearnbydoing">
+  </amp-twitter>
+  </div>
+  <div class="col md-col-6">
+      <div class="max-width-3 pb2 mx-auto flex self-end items-center bg-grey">
+          <div class="travel-hero-content-inner px1 md-px2 flex-auto self-end">
+            <header>
+              <h1 class="mt2 mb1 line-height-1 white">Start<br class="md-hide lg-hide"> a <span
+                  class="bold">project</span> with us</h1>
+              <h2 class="line-height-1 white bold xs-hide sm-hide">Feel free to contact us</h2>
+              <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
+              </amp-position-observer>
+            </header>
+            <!--  Enquiry Form -->
+
+            <div class="travel-hero-search">
+              <form class="enquiry-form amp-form-submitting hide-inputs" method="post"
+                action-xhr="https://forms.php.webanaya.com/durgeshgupta.com-get-a-quote.php" target="_top"
+                id="amp-recaptcha-input-form">
+                <label class="travel-shadow flex col-12 mb1 relative rounded">
+                  <i class="fa fa-id-card-o icon" aria-hidden="true"></i>
+                  <input class="input-icon travel-input travel-input-big border block col-12" type="text" name="name"
+                    id="name" placeholder="Your full name please?" required />
+                </label>
+                <label class="travel-shadow flex col-12 mb1 relative rounded">
+                  <i class="fa fa-envelope-o icon" aria-hidden="true"></i>
+                  <input class="input-icon travel-input travel-input-big border block col-12" type="text" name="email"
+                    placeholder="Your email id " required id="show-all-on-submit-email" />
+                </label>
+                <label class="travel-shadow flex col-12 mb1 relative rounded">
+                  <i class="fa fa-phone icon" aria-hidden="true"></i>
+                  <input class="input-icon travel-input travel-input-big border block col-12" type="text" name="phone"
+                    placeholder="Your phone no. " required id="show-all-on-submit-email" />
+                </label>
+                <label class="travel-shadow flex col-12 mb1 relative rounded">
+                  <i class="fa fa-comments-o icon" aria-hidden="true"></i>
+                  <textarea rows="4" cols="50" class="input-icon travel-input travel-input-big border block col-12"
+                    placeholder="Please enter your message here if any" required name="message"
+                    id="show-all-on-submit-email"></textarea>
+                </label>
+
+                <input class="ampstart-btn travel-input-big rounded center bold white block col-12" type="submit"
+                  value="Send Enquiry" />
+
+                <amp-recaptcha-input layout="nodisplay" name="recaptcha_token" data-sitekey="6LcaRrQUAAAAAHbEYBiidYMbxP2qrhenVYNpaYzp" data-action="recaptcha_example">
+                </amp-recaptcha-input>
+  
+                <div submit-success>
+                  <template type="amp-mustache">
+                    {{response}}
+                  </template>
+                </div>
+                <div submit-error>
+                  <template type="amp-mustache">
+                    {{response}}  
+</template>
+</div>
+  </form>
+  <div class="p2 center">
+    <h2 class="white">For any query please speak to us at </h2>
+      <div><a href="tel:+919910099645" class="h2 text-decoration-none white p1">+91-99 100 99645</a></div>
+  <div class="flex flex-auto">
+      <div class="p1"><a href="https://api.whatsapp.com/send?phone=919910099645&text=I%20am%20interested%20in%20Web%20Services"><i class="fa fa-whatsapp icon-circle"></i></a></div>
+    <div class="p1"><a href="#"><i class="fa fa-facebook icon-circle"></i></a></div>
+    <!-- <div class="p1"><a href="#"><i class="fa fa-twitter icon-circle"></i></a></div> -->
+    <!-- <div><a href="#"><i class="fa fa-instagram icon-circle"></i></a></div> -->
+    <div class="p1"><a href="#"><i class="fa fa-github icon-circle"></i></a></div>
+    <!-- <div><a href="#"><i class="fa fa-linkedin icon-circle"></i></a></div> -->
+    <div class="p1"><a href="https://twitter.com/ilearnbydoing"><i class="fa fa-twitter icon-circle"></i></a></div>
+  </div>
+</div> </div>
+
+  </div>
+  </div>
+  </div>
+</section>
+<!-- Contact and Twitter -->
 
 
 
@@ -789,7 +875,7 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
     <span tabindex="1" role="button" on="tap:home.scrollTo(duration=500, position=top)" class="active">Home</a></span>
     <span tabindex="2" role="button" on="tap:about.scrollTo(duration=500, position=top)" class="">About</a></span>
     <span tabindex="3" role="button" on="tap:portfolio.scrollTo(duration=500, position=top)" class="">Portfolio</a></span>
-    <span tabindex="3" role="button" on="tap:home.scrollTo(duration=500, position=top)" class="">Contact</a></span>
+    <span tabindex="4" role="button" on="tap:contact.scrollTo(duration=500, position=top)" class="">Contact</a></span>
   </div>
 </footer>
 <!--/ Footer  -->

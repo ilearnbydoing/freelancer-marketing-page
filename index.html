@@ -98,7 +98,8 @@
   <script async custom-element="amp-recaptcha-input" src="https://cdn.ampproject.org/v0/amp-recaptcha-input-0.1.js"></script>
 
   <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
-  <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+  <!-- <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script> -->
+  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
@@ -308,11 +309,11 @@
       <h2 class="white">For any query please speak to us at </h2>
         <div><a href="tel:+919910099645" class="h2 text-decoration-none white p1">+91-99 100 99645</a></div>
     <div class="flex flex-auto">
-        <div class="p1"><a href="https://api.whatsapp.com/send?phone=919910099645&text=I%20am%20interested%20in%20Web%20Services"><i class="fa fa-whatsapp icon-circle"></i></a></div>
+        <div class="pt1"><a href="https://api.whatsapp.com/send?phone=919910099645&text=I%20am%20interested%20in%20Web%20Services"><i class="fa fa-whatsapp icon-circle"></i></a></div>
       <div class="p1"><a href="#"><i class="fa fa-facebook icon-circle"></i></a></div>
       <!-- <div class="p1"><a href="#"><i class="fa fa-twitter icon-circle"></i></a></div> -->
       <!-- <div><a href="#"><i class="fa fa-instagram icon-circle"></i></a></div> -->
-      <div class="p1"><a href="#"><i class="fa fa-github icon-circle"></i></a></div>
+      <div class="pt1"><a href="#"><i class="fa fa-github icon-circle"></i></a></div>
       <div class="p1"><a href="https://twitter.com/ilearnbydoing"><i class="fa fa-twitter icon-circle"></i></a></div>
     </div>
 </div> </div>
@@ -765,16 +766,22 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
 <!-- Contact and Twitter -->
 <section id="contact">
     <div class="max-width-3 mx-auto px1 md-px2 mb2">
-        <h2 class="bold title h2 mb2 center">Contact</h2>
+        <h2 class="bold title h2 mb2 center">Contact Me</h2>
       </div>
       <div class="clearfix">
-  <div class="col md-col-6 p2">
-    <amp-twitter width="375"
+  <div class="col md-col-6 p2 order-2">
+    <!-- <amp-twitter width="375"
     height="100" data-limit="3"
     layout="responsive" data-timeline-source-type="profile" data-timeline-url="ilearnbydoing">
-  </amp-twitter>
+  </amp-twitter> -->
+  <amp-iframe width="400" height="400"
+    sandbox="allow-scripts allow-same-origin"
+    layout="responsive"
+    frameborder="0"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.5258760536503!2d73.19467931490334!3d19.21589998700776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x18efd6030e3e8322!2sDurgesh%20Gupta%20-%20Freelance%20Web%20Designer%20and%20Marketer!5e0!3m2!1sen!2sin!4v1566801371863!5m2!1sen!2sin">
+</amp-iframe>
   </div>
-  <div class="col md-col-6">
+  <div class="col md-col-6 order-0">
       <div class="max-width-3 pb2 mx-auto flex self-end items-center bg-grey">
           <div class="travel-hero-content-inner px1 md-px2 flex-auto self-end">
             <header>
@@ -833,11 +840,11 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
     <h2 class="white">For any query please speak to us at </h2>
       <div><a href="tel:+919910099645" class="h2 text-decoration-none white p1">+91-99 100 99645</a></div>
   <div class="flex flex-auto">
-      <div class="p1"><a href="https://api.whatsapp.com/send?phone=919910099645&text=I%20am%20interested%20in%20Web%20Services"><i class="fa fa-whatsapp icon-circle"></i></a></div>
+      <div class="pt1"><a href="https://api.whatsapp.com/send?phone=919910099645&text=I%20am%20interested%20in%20Web%20Services"><i class="fa fa-whatsapp icon-circle"></i></a></div>
     <div class="p1"><a href="#"><i class="fa fa-facebook icon-circle"></i></a></div>
     <!-- <div class="p1"><a href="#"><i class="fa fa-twitter icon-circle"></i></a></div> -->
     <!-- <div><a href="#"><i class="fa fa-instagram icon-circle"></i></a></div> -->
-    <div class="p1"><a href="#"><i class="fa fa-github icon-circle"></i></a></div>
+    <div class="pt1"><a href="#"><i class="fa fa-github icon-circle"></i></a></div>
     <!-- <div><a href="#"><i class="fa fa-linkedin icon-circle"></i></a></div> -->
     <div class="p1"><a href="https://twitter.com/ilearnbydoing"><i class="fa fa-twitter icon-circle"></i></a></div>
   </div>

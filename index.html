@@ -100,6 +100,8 @@
   <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
   <!-- <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script> -->
   <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
 
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
@@ -943,5 +945,14 @@ viewBox="0 0 64 64"><g id="surface1"><path style="fill:currentColor; " d="M 52.8
   <amp-install-serviceworker src="/sw.js" data-iframe-src="https://durgeshgupta.com/sw.html"
   layout="nodisplay">
 </amp-install-serviceworker>
+<amp-analytics type="gtag" data-credentials="include">
+  <script type="application/json">
+  {
+    "vars" : {
+      "gtag_id": "UA-26177622-1",
+    }
+  }
+  </script>
+  </amp-analytics>
   </body>
 </html>

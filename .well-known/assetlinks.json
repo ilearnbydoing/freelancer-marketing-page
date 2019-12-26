@@ -4,7 +4,10 @@
     "target": {
       "namespace": "android_app",
       "package_name": "xyz.appmaker.oklbgx",
-      "sha256_cert_fingerprints": ["EC:B9:E0:42:28:CE:74:16:08:1C:DB:1E:DC:AD:08:1A:26:B2:3B:1B:4B:5F:93:06:8B:13:54:B7:0C:AC:BB:94"]
+      "sha256_cert_fingerprints": [
+        "EC:B9:E0:42:28:CE:74:16:08:1C:DB:1E:DC:AD:08:1A:26:B2:3B:1B:4B:5F:93:06:8B:13:54:B7:0C:AC:BB:94",
+        "3D:29:DC:E9:80:6C:8F:CB:EA:DA:CD:8C:6B:FB:1B:E0:09:D5:6B:81:BD:AF:14:81:CD:25:35:BF:EC:7F:F9:7B"
+      ]
     }
   }
 ]
